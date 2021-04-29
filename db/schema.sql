@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS petTrax_db;
+
+CREATE DATABASE petTrax_db;
