@@ -11,6 +11,10 @@ Species.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        petID: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
         speciesName: {
             type: DataTypes.STRING,
             allowNull: false,
