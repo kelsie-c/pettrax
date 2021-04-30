@@ -1,15 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
-class User extends Model {
-    // login validation 
-    checkPassword(loginPw) {
-        return bcrypt.compareSync(loginPw, this.password);
-    }
-}
+class Group extends Model {}
 
-User.init(
+Group.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -17,60 +11,26 @@ User.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        name: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        address: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            // add address validation through the form? 3rd party library?
-        },
-        phone: {
+        petID: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            validate: {
-                isNumeric: true,
-                len: [10],
-            },
         },
-        email: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true,
-            },
-        },
-        password: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            validate: {
-                len: [8],
-            },
-        },
-        groupID: {
+        userID: {
             type: DataTypes.ARRAY(DataTypes.INTEGER),
-            // add functionality for deterniming groupID later
-        }
+            allowNull: false,
+        },
+        isAdmin: {
+            type: DataTypes.INTEGER,
+            allowNull: false,
+        },
     },
     {
-        hooks: {
-            beforeCreate: async (newUserData) => {
-                newUserData.password = await bcrypt.hash(newUserData.password, 10);
-                return newUserData;
-            },
-            beforeUpdate: async (updatedUserData) => {
-                updatedUserData.password = await bcrypt.hash(updatedUserData.paswword, 10);
-                return updatedUserData;
-            },
-        },
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'user',
+        modelName: 'group',
     }
 );
 
-module.exports = User;
+module.exports = Group;
