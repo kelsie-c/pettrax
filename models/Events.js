@@ -15,7 +15,7 @@ Events.init(
             type: DataTypes.INTEGER,
             allowNull: false,
         },
-        event: {
+        eventType: {
             type: DataTypes.STRING,
         },
         time: {
