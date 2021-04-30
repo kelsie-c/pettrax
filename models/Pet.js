@@ -38,7 +38,7 @@ Pet.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
-        uniqueMarker: {
+        birthmark: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
