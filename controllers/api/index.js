@@ -6,6 +6,7 @@ const petRoutes = require('./petRoutes');
 const speciesRoutes = require('./speciesRoutes');
 const userRoutes = require('./userRoutes');
 const vetRoutes = require('./vetRoutes');
+const groupRoutes = require('./groupRoutes');
 
 router.use('/events', eventsRoutes);
 router.use('/ice', ICERoutes);
@@ -14,5 +15,6 @@ router.use('/pets', petRoutes);
 router.use('/species', speciesRoutes);
 router.use('/users', userRoutes);
 router.use('/vets', vetRoutes);
+router.use('/groups', groupRoutes);
 
 module.exports = router;
