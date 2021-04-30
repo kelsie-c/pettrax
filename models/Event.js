@@ -22,10 +22,6 @@ Events.init(
             type: DataTypes.DATE,
             allowNull: false,
         },
-        ownerID: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
     },
     {
         sequelize,
