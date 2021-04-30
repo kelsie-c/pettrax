@@ -11,6 +11,10 @@ Pet.init(
             primaryKey: true,
             autoIncrement: true,
         },
+        photo: {
+            type: DataTypes.STRING,
+            // url for pet photo
+        },
         name: {
             type: DataTypes.STRING,
             allowNull: false,
