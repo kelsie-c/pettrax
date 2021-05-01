@@ -1,13 +1,14 @@
 const { User } = require('../models');
 
 const userData = [
+    
     {
       name: 'Sal McDonald',
       address: '23 cherry lane',
       email: 'sal@hotmail.com',
       phone: 3306714324,
       password: 'password12345',
-      groupID: [],
+      groupId: 5,
     },
     {
         name: 'Jerry',
@@ -15,7 +16,7 @@ const userData = [
         email: "sal@hotmail.com",
         phone: 3306714324,
         password: "password12345",
-        groupID: [],
+        groupId: 5,
     },
     {
         name: "Bobby",
@@ -23,7 +24,7 @@ const userData = [
         email: "sal@hotmail.com",
         phone: 3306714324,
         password: "password12345",
-        groupID: [],
+        groupId: 5,
     },
     {
         name: "Tom",
@@ -31,7 +32,7 @@ const userData = [
         email: "sal@hotmail.com",
         phone: 6144167435,
         password: "password12345",
-        groupID: [],
+        groupId: 5,
     },
     {
         name: "Sally",
@@ -39,7 +40,7 @@ const userData = [
         email: "sal@hotmail.com",
         phone: 3425678960,
         password: "password12345",
-        groupID: [],
+        groupId: 5,
     },
 
   ];

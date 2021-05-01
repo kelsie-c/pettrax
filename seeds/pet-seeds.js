@@ -1,17 +1,17 @@
 const { Pet } = require('../models');
 
-const { petData } = [
+const petData = [
 
     {
-        name: 'Scruffy',
+        name: "Scruffy",
         birthday: 04/17/3025,
-        species: 'Dog',
-        breed: 'Labrador',
+        species: "Dog",
+        breed: "Labrador",
         weight: 50.09,
-        color: 'Black',
-        birthmark: 'Brown Paws',
-        ownerID: [0],
-        groupID: [0],
+        color: "Black",
+        birthmark: "Brown Paws",
+        ownerId: 2,
+        groupId: 1,
     },
     {
         name: 'FurBall',
@@ -20,9 +20,9 @@ const { petData } = [
         breed: 'Maine Coon',
         weight: 50.09,
         color: 'Brown',
-        birthmark: 'brown spot',
-        ownerID: [0],
-        groupID: [0],
+        birthmark: "brown spot",
+        ownerId: 2,
+        groupId: 1,
     },
     {
         name: 'Princess',
@@ -31,9 +31,9 @@ const { petData } = [
         breed: 'Chihuaha',
         weight: 50.09,
         color: 'Tan',
-        birthmark: 'Little Tail',
-        ownerID: [0],
-        groupID: [0],
+        birthmark: "Little Tail",
+        ownerId: 2,
+        groupId: 1,
     },
     {
         name: 'Tut',
@@ -42,24 +42,24 @@ const { petData } = [
         breed: 'Sphynx',
         weight: 50.09,
         color: 'None',
-        birthmark: 'Marker',
-        ownerID: [0],
-        groupID: [0], 
+        birthmark: "Marker",
+        ownerId: 2,
+        groupId: 1,
     },
     {
         name: 'Barkey',
         birthday: 04/17/3025,
         species: 'Dog',
-        breed: 'Golden Retriever',
+        breed: "Golden Retriever",
         weight: 50.09,
         color: 'Golden',
-        birthMark: 'Bark',
-        ownerID: [],
-        groupID: [], 
+        birthmark: 'Bark',
+        ownerId: 2,
+        groupId: 1, 
     },
    
-]
-    const seedPets = () => Cat.bulkCreate(petData);
+];
+    const seedPets = () => Pet.bulkCreate(petData);
     
     
     module.exports = seedPets;

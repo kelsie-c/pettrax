@@ -1,13 +1,13 @@
 const { Species } = require('../models');
 
-const { speciesData } = [
+const speciesData = [
     {
-    petID: 34554,
-    speciesName: "Dog"
+        petId: 34554,
+        speciesName: "Dog"
     },
     {
-    petID: 34554,
-    speciesName: "Cat"
+        petId: 45612,
+        speciesName: "Dog"
     },
 ]
 const seedSpecies = () => Species.bulkCreate(speciesData);

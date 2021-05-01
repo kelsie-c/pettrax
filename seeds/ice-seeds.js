@@ -1,13 +1,13 @@
 const { ICE } = require('../models');
 
-const { iceData } = [
+const iceData = [
     {
-    groupID: 34554,
+    groupId: 34554,
     contactName: "Bob Wallace",
     contactPhone: 8763839030,
     },
     {
-    groupID: 34554,
+    groupId: 45698,
     contactName: "John Smith",
     contactPhone: 878970000
     },

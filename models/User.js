@@ -27,30 +27,31 @@ User.init(
             // add address validation through the form? 3rd party library?
         },
         phone: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.BIGINT,
             allowNull: false,
-            validate: {
-                isNumeric: true,
-                len: [10],
-            },
+        //     validate: {
+        //         isNumeric: true,
+        //         len: [10],
+        //     },
         },
         email: {
             type: DataTypes.STRING,
             allowNull: false,
-            unique: true,
-            validate: {
-                isEmail: true,
-            },
+            // unique: true,
+            // validate: {
+            //     isEmail: true,
+            // },
         },
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [8],
-            },
+            // validate: {
+            //     len: [8],
+            // },
         },
-        groupID: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
+        groupId: {
+            type: DataTypes.INTEGER,
+            // DataTypes.ARRAY(DataTypes.INTEGER)
             // add functionality for deterniming groupID later
         }
     },
