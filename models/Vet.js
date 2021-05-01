@@ -11,9 +11,13 @@ Vet.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        petID: {
+        petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            // references: {
+            //     model: Pet,
+            //     key: id,
+            // },
         },
         vetName: {
             type: DataTypes.STRING,

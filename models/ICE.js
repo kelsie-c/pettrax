@@ -11,9 +11,13 @@ ICE.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        groupID: {
+        groupId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            // references: {
+            //     model: Group,
+            //     key: id,
+            // },
         },
         contactName: {
             type: DataTypes.STRING,

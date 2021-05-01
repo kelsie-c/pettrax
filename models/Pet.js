@@ -45,16 +45,18 @@ Pet.init(
         birthmark: {
             type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                len: [2,100],
-            },
+            // validate: {
+            //     len: [2,100],
+            // },
         },
-        ownerID: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
+        ownerId: {
+            type: DataTypes.INTEGER,
+            // DataTypes.ARRAY(DataTypes.INTEGER)
             allowNull: false,
         },
-        groupID: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
+        groupId: {
+            type: DataTypes.INTEGER,
+            // DataTypes.ARRAY(DataTypes.INTEGER)
             
         },
     },

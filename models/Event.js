@@ -1,9 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
+const Pet = require('./Pet');
 
-class Events extends Model {}
+class Event extends Model {}
 
-Events.init(
+Event.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -11,15 +12,19 @@ Events.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        petID: {
+        petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            // references: {
+            //     model: Pet,
+            //     key: id,
+            // },
         },
         eventType: {
             type: DataTypes.STRING,
         },
         time: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
         },
     },
@@ -28,8 +33,8 @@ Events.init(
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'events'
+        modelName: 'event'
     }
 );
 
-module.exports = Events;
+module.exports = Event;

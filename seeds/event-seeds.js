@@ -1,35 +1,26 @@
 const { Event } = require('../models');
 
-const { eventData } = [
+const eventData = [
     {
-        petID: 67854,
-        event: "Poop",
+        petId: 67854,
+        eventType: "Poop",
         time: "Date",
-        ownerID: 5e4344,
-
     },
     {
-        petID: 67854,
+        petId: 12345,
         event: "Pee",
         time: "Date",
-        ownerID: 5e4344,
-
     },
     {
-        petID: 67854,
+        petId: 78945,
         event: "Poop and Pee",
         time: "Date",
-        ownerID: 5e4344,
-
     },
     {
-        petID: 67854,
+        petId: 78615,
         event: "Poop",
         time: "Date",
-        ownerID: 5e4344,
-
     },
-
 ];
 
 const seedEvents = () => Event.bulkCreate(eventData);

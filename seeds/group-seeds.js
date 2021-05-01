@@ -1,9 +1,9 @@
 const { Group } = require('../models');
 
-const { groupData } = [   
+const groupData = [   
     {
-    petID: 34554,
-    userID: 34433,
+    petId: 34554,
+    userId: 34433,
     isAdmin: 43344,
     }
 ]

@@ -11,12 +11,17 @@ Group.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        petID: {
+        petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
+            // references: {
+            //     model: Pet,
+            //     key: id,
+            // },
         },
-        userID: {
-            type: DataTypes.ARRAY(DataTypes.INTEGER),
+        userId: {
+            type: DataTypes.INTEGER,
+            //DataTypes.ARRAY(DataTypes.INTEGER)
             allowNull: false,
         },
         isAdmin: {
