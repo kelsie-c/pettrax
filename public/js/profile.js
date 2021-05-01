@@ -12,7 +12,7 @@ const breed = document.querySelector('#pet-breed').value.trim();
 const weight = document.querySelector('#pet-weight').value.trim();
 const color = document.querySelector('#pet-color').value.trim();
 const birthmark = document.querySelector('#pet-birthmark').value.trim();
-const petInfo = document.querySelector('#pet-birthmark').value.trim();
+const petInfo = document.querySelector('#pet-info').value.trim();
 
 if (name && address && phone) {
     const response = await fetch(`/api/profiles`, {
