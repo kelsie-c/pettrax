@@ -6,6 +6,7 @@ const { vetData } = [
     vetName: "Bob Wallace",
     vetAddress: "378 Walnut Rd",
     vetPhone: 27344449876
+
     },
    
 ];

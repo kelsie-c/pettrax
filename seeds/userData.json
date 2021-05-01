@@ -5,6 +5,7 @@
     "email": "sal@hotmail.com",
     "phone": 3306714324,
     "password": "password12345"
+    
   },
   {
       "name": "Jerry",
@@ -25,7 +26,7 @@
       "address": "29 Cherry lane",
       "email": "sal@hotmail.com",
       "phone": 6144167435,
-      "password": "password12345",
+      "password": "password12345"
   },
   {
       "name": "Sally",
