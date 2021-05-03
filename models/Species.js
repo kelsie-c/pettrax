@@ -14,10 +14,10 @@ Species.init(
         petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // references: {
-            //     model: Pet,
-            //     key: id,
-            // },
+            references: {
+                model: 'pet',
+                key: 'id',
+            },
         },
         speciesName: {
             type: DataTypes.STRING,
