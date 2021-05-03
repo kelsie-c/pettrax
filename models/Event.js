@@ -15,10 +15,10 @@ Event.init(
         petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // references: {
-            //     model: Pet,
-            //     key: id,
-            // },
+            references: {
+                model: 'pet',
+                key: 'id',
+            },
         },
         eventType: {
             type: DataTypes.STRING,

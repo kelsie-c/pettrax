@@ -14,10 +14,10 @@ Vet.init(
         petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // references: {
-            //     model: Pet,
-            //     key: id,
-            // },
+            references: {
+                model: 'pet',
+                key: 'id',
+            },
         },
         vetName: {
             type: DataTypes.STRING,

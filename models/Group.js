@@ -14,10 +14,10 @@ Group.init(
         petId: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // references: {
-            //     model: Pet,
-            //     key: id,
-            // },
+            references: {
+                model: 'pet',
+                key: 'id',
+            },
         },
         userId: {
             type: DataTypes.INTEGER,

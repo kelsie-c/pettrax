@@ -14,10 +14,10 @@ Notification.init(
         petID: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // references: {
-            //     model: Pet,
-            //     key: id,
-            // },
+            references: {
+                model: 'pet',
+                key: 'id',
+            },
         },
         bathroomRemind: {
             type: DataTypes.BOOLEAN,
