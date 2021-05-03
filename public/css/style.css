@@ -1,0 +1,118 @@
+/*********** GLOBAL VARIABLES ***********/
+:root {
+  --IBMsans: "IBM Plex Sans", sans-serif;
+  --Merienda: "Merienda", cursive;
+  --White: #ffffff;
+  --Black: #000000;
+  --Slate: #576a78;
+  --LightSlate: #6e8899;
+  --SkyBlue: #a8dfff;
+  --Lime: #e7ff67;
+}
+
+/*********** FONTS IMPORT if link in HTML doesn't work ***********/
+/*  'IBM Plex Sans', sans-serif  */
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@300;700&display=swap"); */
+
+/*  'Merienda', cursive  */
+/* @import url("https://fonts.googleapis.com/css2?family=Merienda:wght@400;700&display=swap"); */
+
+/************************* BODY STYLES *******************/
+body {
+  font-family: var(--IBMsans);
+  font-size: 16px;
+  color: var(--Slate);
+  line-height: 1.1em;
+}
+
+header {
+  background-color: var(--Slate);
+}
+
+h2 {
+  font-family: var(--Merienda);
+  font-size: 2em;
+  font-weight: 700;
+  color: var(--Slate);
+}
+
+.login-page {
+  background-color: var(--LightSlate);
+  background-image: url(../img/Paw-pattern-Slate.png);
+  background-repeat: repeat;
+}
+
+.menu-page {
+  background-color: var(--SkyBlue);
+}
+
+nav a {
+  font-family: var(--IBMsans);
+  font-weight: 700;
+  font-size: 0.9em;
+  color: var(--Lime);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.navlink a {
+  text-decoration: none;
+}
+
+.navlink a:hover {
+  text-decoration: underline;
+}
+
+input {
+  width: 100%;
+  font-family: var(--IBMsans);
+  font-size: 1em;
+  font-weight: 400;
+  color: var(--LightSlate);
+}
+
+.halfinput {
+  width: 40%;
+}
+
+form {
+  line-height: 1.5em;
+}
+
+button {
+  width: 100%;
+  background-color: var(--Lime);
+  color: var(--Slate);
+  font-family: var(--IBMsans);
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.inversebutton {
+  width: 100%;
+  background-color: var(--LightSlate);
+  color: var(--Lime);
+  border: 1px solid;
+  border-color: var(--Lime);
+  font-family: var(--IBMsans);
+  font-size: 1.3em;
+  font-weight: 400;
+}
+
+textarea {
+  min-width: 100%;
+  min-height: 100%;
+  font-family: var(--IBMsans);
+  line-height: 1.4em;
+  background: transparent;
+  border-top: 1px solid var(--LightSlate);
+  resize: none;
+  color: var(--White);
+}
+
+textarea:focus {
+  outline: 3px solid var(--Slate);
+  background-color: var(--LightSlate);
+}
