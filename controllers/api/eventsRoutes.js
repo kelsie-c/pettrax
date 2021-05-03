@@ -1,11 +1,11 @@
 const router = require('express').Router();
-const { Events } = require('../../models');
+const { Event } = require('../../models');
 
 // get all events
 router.get('/', async (req, res) => {
     try {
-        const eventsData = await Events.findAll();
-        res.status(200).json(eventsData);
+        const eventData = await Event.findAll();
+        res.status(200).json(eventData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -14,10 +14,10 @@ router.get('/', async (req, res) => {
 // get a single event
 router.get('/:id', async (req, res) => {
     try {
-        const eventsData = await Events.findByPk(req.params.id, {
+        const eventData = await Event.findByPk(req.params.id, {
             // will this include any other models or attributes?
         });
-        res.status(200).json(eventsData);
+        res.status(200).json(eventData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -26,8 +26,8 @@ router.get('/:id', async (req, res) => {
 // create an event
 router.post('/', async (req, res) => {
     try {
-        const eventsData = await Events.create(req.body);
-        res.status(200).json(eventsData);
+        const eventData = await Event.create(req.body);
+        res.status(200).json(eventData);
     } catch (err) {
         res.status(400).json(err);
     }
@@ -36,10 +36,10 @@ router.post('/', async (req, res) => {
 // update an event
 router.put('/:id', async (req, res) => {
     try {
-        const eventsData = await Events.update({
+        const eventData = await Event.update({
             where: { id: req.params.id }
         })
-        res.status(200).json(eventsData);
+        res.status(200).json(eventData);
     } catch (err) {
         res.status(500).json(err);
     }
@@ -48,10 +48,10 @@ router.put('/:id', async (req, res) => {
 // delete an event
 router.delete('/:id', async (req, res) => {
     try {
-        const eventsData = await Events.destroy({
+        const eventData = await Event.destroy({
             where: { id: req.params.id }
         })
-        res.status(200).json(eventsData);
+        res.status(200).json(eventData);
     } catch (err) {
         res.status(500).json(err);
     }
