@@ -8,17 +8,17 @@ const eventData = [
     },
     {
         petId: 12345,
-        event: "Pee",
+        eventType: "Pee",
         time: "Date",
     },
     {
         petId: 78945,
-        event: "Poop and Pee",
+        eventType: "Poop and Pee",
         time: "Date",
     },
     {
         petId: 78615,
-        event: "Poop",
+        eventType: "Poop",
         time: "Date",
     },
 ];

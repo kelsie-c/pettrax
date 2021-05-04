@@ -26,7 +26,7 @@ Pet.init(
                 isDate: true,
             },
         },
-        species: {
+        speciesType: {
             type: DataTypes.STRING,
             allowNull: false,
         },

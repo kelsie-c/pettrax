@@ -5,7 +5,7 @@ const petData = [
     {
         name: "Scruffy",
         birthday: 04/17/3025,
-        species: "Dog",
+        speciesType: "Dog",
         breed: "Labrador",
         weight: 50.09,
         color: "Black",
@@ -16,7 +16,7 @@ const petData = [
     {
         name: 'FurBall',
         birthday: 04/17/3025,
-        species: 'Cat',
+        speciesType: 'Cat',
         breed: 'Maine Coon',
         weight: 50.09,
         color: 'Brown',
@@ -27,7 +27,7 @@ const petData = [
     {
         name: 'Princess',
         birthday: 04/17/3025,
-        species: 'Dog',
+        speciesType: 'Dog',
         breed: 'Chihuaha',
         weight: 50.09,
         color: 'Tan',
@@ -38,7 +38,7 @@ const petData = [
     {
         name: 'Tut',
         birthday: 04/17/3025,
-        species: 'Cat',
+        speciesType: 'Cat',
         breed: 'Sphynx',
         weight: 50.09,
         color: 'None',
@@ -49,7 +49,7 @@ const petData = [
     {
         name: 'Barkey',
         birthday: 04/17/3025,
-        species: 'Dog',
+        speciesType: 'Dog',
         breed: "Golden Retriever",
         weight: 50.09,
         color: 'Golden',
