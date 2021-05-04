@@ -10,10 +10,10 @@
   <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@700&display=swap" rel="stylesheet">
 <!--CUSTOM STYLES-->
   <link rel="stylesheet" href="./css/style.css" />
-  <title>PetTrax: Dashboard</title>
+  <title>PetTrax: Menu</title>
 </head>
 
-<body class="container dashboard-page">
+<body class="container menu-page">
 
   <header class="container header">
     <div class="col-10 col-md-6">
@@ -25,23 +25,18 @@
   </header>
 
   <!-- Main horizontal wrapper -->
-  <div class="container">
+  <div class="row justify-content-center">
     <!-- Login form wrapper -->
-    <div class="row justify-content-center">
-      <div class="pet-card col-4 col-md-2">
-        <img class="pet-pic" src="./img/pet-photos/Ditto_300x300.jpg" alt="Photo of Ditto">
-        <div class="">
-          <h5 class="pet-name">Ditto</h5>
-          <p class="warning">No Warnings</p>
-        </div>
-      </div>
+    <div class="col col-10 col-md-6">
+      <a href="dashboard.html" class="breadcrumb"><< Back to Dashboard</a>
+      <h2>Menu</h2><br>
+      <h3><a href="#">Profile</a></h3>
+      <h3><a href="#">Pets</a></h3>
+      <h3><a href="#">Groups</a></h3>
+      <h3><a href="#">Logs</a></h3>
+      <h3><a href="#">Emergency</a></h3>
     </div>
-    <form action="./js/dashboard.js" method="POST">
-      <input type="time" id="time" name="time"><br>
-      <button type="submit">TRACK</button>
-    </form>
   </div>
-
 
   <!--JQUERY & POPPER-->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

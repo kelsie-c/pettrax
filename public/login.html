@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <!--GOOGLE FONTS-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@700&display=swap" rel="stylesheet">
 <!--CUSTOM STYLES-->
   <link rel="stylesheet" href="./css/reset.css" />
   <link rel="stylesheet" href="./css/style.css" />
@@ -15,11 +15,11 @@
   <title>PetTrax: caretaking made easy</title>
 </head>
 
-<body class="container login-page">
+<body class="container login-page vertical-center">
   <!-- Main vertical wrapper -->
-  <div class="col align-self-center">
+  <div class="col">
     <!-- Main horizontal wrapper -->
-    <div class="row justify-content-center align-items-center">
+    <div class="row justify-content-center">
       <!-- Login form wrapper -->
       <div class="col col-10 col-md-6">
         <form action="./js/login.js" method="POST">
@@ -27,7 +27,8 @@
           <input type="email" id="email" name="email" placeholder="email address" required><br>
           <input type="password" id="password" name="password" placeholder="password" required><br><br>
           <button type="submit">LOG IN</button>
-        </form>
+        </form><br><br>
+        <button type="button" class="inversebutton" onclick="return signupFormHandler()">new user? sign up</button>
       </div>
     </div>
   </div>
