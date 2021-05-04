@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 // update a species
 router.put('/:id', async (req, res) => {
     try {
-        const speciesData = await Species.update({
+        const speciesData = await Species.update(req.body, {
             where: { id: req.params.id }
         })
         res.status(200).json(speciesData);
