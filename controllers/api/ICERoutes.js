@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 // update an ICE
 router.put('/:id', async (req, res) => {
     try {
-        const iceData = await ICE.update({
+        const iceData = await ICE.update(req.body, {
             where: { id: req.params.id }
         })
         res.status(200).json(iceData);

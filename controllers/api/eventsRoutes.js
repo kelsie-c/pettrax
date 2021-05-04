@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 // update an event
 router.put('/:id', async (req, res) => {
     try {
-        const eventData = await Event.update({
+        const eventData = await Event.update(req.body, {
             where: { id: req.params.id }
         })
         res.status(200).json(eventData);

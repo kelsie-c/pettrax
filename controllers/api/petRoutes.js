@@ -34,11 +34,12 @@ router.post('/', async (req, res) => {
 });
 
 // update a pet
+// localhost:3001/api/pets/:id
 router.put('/:id', async (req, res) => {
     try {
-        const petData = await Pet.update({
-            where: { id: req.params.id }
-        })
+        const petData = await Pet.update(
+            req.body, { where: { id: req.params.id }
+        });
         res.status(200).json(petData);
     } catch (err) {
         res.status(500).json(err);

@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 // update a vet
 router.put('/:id', async (req, res) => {
     try {
-        const vetData = await Vet.update({
+        const vetData = await Vet.update(req.body, {
             where: { id: req.params.id }
         })
         res.status(200).json(vetData);

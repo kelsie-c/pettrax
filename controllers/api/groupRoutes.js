@@ -36,7 +36,7 @@ router.post('/', async (req, res) => {
 // update a group
 router.put('/:id', async (req, res) => {
     try {
-        const groupData = await Group.update({
+        const groupData = await Group.update(req.body, {
             where: { id: req.params.id }
         })
         res.status(200).json(groupData);
