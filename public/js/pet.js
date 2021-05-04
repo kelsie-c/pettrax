@@ -21,7 +21,7 @@ const editButtonHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/pet');
     } else {
-      alert('Failed to delete project');
+      alert('Failed to update pet profile');
     }
   }
 };
@@ -31,26 +31,30 @@ document
     .addEventListener('submit', editFormHandler);
 
 
-// const delButtonHandler = async (event) => {
-//   if (event.target.hasAttribute('data-id')) {
-//     const id = event.target.getAttribute('data-id');
+const delButtonHandler = async (event) => {
+if (event.target.hasAttribute('data-id')) {
+const id = event.target.getAttribute('data-id');
 
-//     const response = await fetch(`/api/pets/${id}`, {
-//       method: 'DELETE',
-//     });
+    const response = await fetch(`/api/pets/${id}`, {
+      method: 'DELETE',
+    });
 
-//     if (response.ok) {
-//       document.location.replace('/profile');
-//     } else {
-//       alert('Failed to delete project');
-//     }
-//   }
-// };
+    if (response.ok) {
+      document.location.replace('/pet');
+    } else {
+      alert('Failed to delete project');
+    }
+  }
+};
 
-// document
-//   .querySelector('.new-profile-page')
-//   .addEventListener('submit', newFormHandler);
+document
+  .querySelector('.new-pet-profile')
+  .addEventListener('submit', newFormHandler);
 
-// document
-//   .querySelector('.pet-profile-page')
-//   .addEventListener('click', delButtonHandler);
+  document
+  .querySelector('.pet-profile-page')
+  .addEventListener('click', editButtonHandler)
+
+document
+  .querySelector('.pet-profile-page')
+  .addEventListener('click', delButtonHandler);
