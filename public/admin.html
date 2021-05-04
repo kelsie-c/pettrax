@@ -7,34 +7,34 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 <!--GOOGLE FONTS-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@700&display=swap" rel="stylesheet">
 <!--CUSTOM STYLES-->
   <link rel="stylesheet" href="./css/style.css" />
-
-  <title>PetTrax: caretaking made easy</title>
+  <title>PetTrax: Profile Admin</title>
 </head>
 
-<header class="header col-12">
-  <nav class="row justify-content-between">
-    <a href="index.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
-    <a href="admin.html">Menu</a>
-  </nav>
-</header>
-
 <body class="container menu-page">
-  <!-- Main vertical wrapper -->
-  <div class="col align-self-center">
-    <!-- Main horizontal wrapper -->
-    <div class="row justify-content-center">
-      <!-- Login form wrapper -->
-      <div class="col col-10 col-md-6">
-        <form action="./js/login.js" method="POST">
-          <h2>Start Tracking</h2>
-          <input type="email" id="email" name="email" placeholder="email address" required><br>
-          <input type="password" id="password" name="password" placeholder="password" required><br><br>
-          <button type="submit">LOG IN</button>
-        </form>
-      </div>
+
+  <header class="container header">
+    <div class="col-10 col-md-6">
+      <nav class="d-flex justify-content-between">
+        <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+        <a href="menu.html">Menu</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main horizontal wrapper -->
+  <div class="row justify-content-center">
+    <!-- Login form wrapper -->
+    <div class="col col-10 col-md-6">
+      <a href="dashboard.html" class="breadcrumb"><< Back to Dashboard</a>
+      <h2>Start Tracking</h2>
+      <form action="./js/login.js" method="POST">
+        <input type="email" id="email" name="email" placeholder="email address" required><br>
+        <input type="password" id="password" name="password" placeholder="password" required><br><br>
+        <button type="submit">LOG IN</button>
+      </form>
     </div>
   </div>
 
