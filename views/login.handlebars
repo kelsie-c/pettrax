@@ -1,46 +1,25 @@
- <title>PetTrax: caretaking made easy</title>
-</head>
+ {{!-- <title>PetTrax: caretaking made easy</title>
+</head> --}}
 
-<body class="container login-page vertical-center">
+<div class="container login-page vertical-center">
   <!-- Main vertical wrapper -->
   <div class="col">
     <!-- Main horizontal wrapper -->
     <div class="row justify-content-center">
       <!-- Login form wrapper -->
       <div class="col col-10 col-md-6">
-        <form action="./js/login.js" method="POST">
+        <form>
           <img src="./img/PetTrax_Logo-login.svg" alt="PetTrax logo"><br><br>
           <input type="email" id="email" name="email" placeholder="email address" required><br>
           <input type="password" id="password" name="password" placeholder="password" required><br><br>
-          <button type="submit">LOG IN</button>
+          <button id="submit" type="submit">LOG IN</button>
         </form><br><br>
         <button type="button" class="inversebutton" onclick="return signupFormHandler()">new user? sign up</button>
       </div>
     </div>
   </div>
 
+  <!-- CUSTOM SCRIPTS -->
+  <script src="./js/login.js"></script>
 
-{{!-- 
-
-<div class="row">
-  <div class="col-md-6">
-     <h1>Welcome to PetTrax</h1>
-    <form class="login-form">       
-      <h2>Please login</h2>
-      <div class="form-group">
-        <label for="email-signin">email:</label>
-        <input class="form-input" type="text" id="email-login" />
-      </div>
-      <div class="form-group">
-        <label for="password-signin">password:</label>
-        <input class="form-input" type="password" id="password-login" />
-      </div>
-      <div class="form-group">
-        <button class="btn btn-primary" type="submit">sign in</button>
-      </div>
-    </form>
-  </div>
-  
-  
-   --}}
-<script src="./js/login.js"></script>
+</div>
