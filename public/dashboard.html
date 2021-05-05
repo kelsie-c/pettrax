@@ -26,18 +26,57 @@
 
   <!-- Main horizontal wrapper -->
   <div class="container">
-    <!-- Login form wrapper -->
-    <div class="row justify-content-center">
-      <div class="pet-card col-4 col-md-2">
+    <!-- Pet cards wrapper -->
+    <div class="row d-flex justify-content-around">
+
+      <div class="pet-card col-5 col-md-3 text-center">
         <img class="pet-pic" src="./img/pet-photos/Ditto_300x300.jpg" alt="Photo of Ditto">
-        <div class="">
-          <h5 class="pet-name">Ditto</h5>
-          <p class="warning">No Warnings</p>
+        <div class="pet-title">
+          <p class="pet-name">Ditto</p>
+          <p class="pet-warning">No Warnings</p>
         </div>
       </div>
+      <div class="pet-card col-5 col-md-3 text-center">
+        <img class="pet-pic" src="./img/pet-photos/Dublin_300x300.jpg" alt="Photo of Dublin">
+        <div class="pet-title">
+          <p class="pet-name">Dublin</p>
+          <p class="pet-warning">No Warnings</p>
+        </div>
+      </div>
+      <div class="pet-card col-5 col-md-3 text-center">
+        <img class="pet-pic" src="./img/pet-photos/Dagger_300x300.jpg" alt="Photo of Dagger">
+        <div class="pet-title">
+          <p class="pet-name">Dagger</p>
+          <p class="pet-warning">No Warnings</p>
+        </div>
+      </div>
+      <div class="pet-card col-5 col-md-3 text-center">
+        <img class="pet-pic" src="./img/pet-photos/Dita_300x300.jpg" alt="Photo of Dita">
+        <div class="pet-title">
+          <p class="pet-name">Dita</p>
+          <p class="pet-warning">No Warnings</p>
+        </div>
+      </div>
+
+      <!-- Event Icon Row: Poo, Pee, Food -->
+      <div class="row d-flex justify-content-around my-3 py-3 border-top border-2 border-dark">
+        <div class="col-3 text-center">
+          <img src="./img/icons/Pee-icon.svg" alt="Pee Icon" class="event-icon">
+          <p class="event-name">Pee</p>
+        </div>
+        <div class="col-3 text-center">
+          <img src="./img/icons/Poo-icon.svg" alt="Poo Icon" class="event-icon">
+          <p class="event-name">Poo</p>
+        </div>
+        <div class="col-3 text-center">
+          <img src="./img/icons/Food-icon.svg" alt="Food Icon" class="event-icon">
+          <p class="event-name">Food</p>
+        </div>
+      </div>
+
     </div>
     <form action="./js/dashboard.js" method="POST">
-      <input type="time" id="time" name="time"><br>
+      <input type="time" id="time" name="time" placeholder="Enter Custom Time" autocomplete="on"><br>
       <button type="submit">TRACK</button>
     </form>
   </div>
