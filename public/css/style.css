@@ -183,6 +183,7 @@ textarea:focus {
 }
 
 .pet-card {
+  /* border: 1px red solid; */
 }
 
 .pet-pic {
@@ -190,7 +191,49 @@ textarea:focus {
   height: 125px;
   border-radius: 50%;
   border: 6px solid var(--Slate);
+  /* -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out; */
+}
+
+.pet-pic:hover {
+  /* overflow: hidden;
+  -webkit-transform: scale(1.3);
+  transform: scale(1.3); */
+}
+
+.pet-pic-selected {
+  border: 6px solid var(--White);
 }
 
 .pet-name {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--Black);
+  margin-bottom: -0.3em;
+}
+
+.pet-name-selected {
+  color: var(--White);
+}
+
+.pet-warning {
+  font-size: 0.7em;
+  color: var(--Lime);
+  letter-spacing: 0.03em;
+}
+
+.event-name {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  color: var(--Black);
+  margin-bottom: -0.3em;
+}
+
+.event-icon {
+  width: 75px;
+  height: 75px;
 }
