@@ -29,12 +29,7 @@ const seedAll = async () => {
   console.log('\n----- VETS SEEDED -----\n');
   
   await seedSpecies();
-  console.log('\n----- SPECIES SEEDED -----\n');
-
-  await seedGroups();
-  console.log('\n----- SPECIES SEEDED -----\n');
-
-  
+  console.log('\n----- SPECIES SEEDED -----\n');  
   
   process.exit(0);
 

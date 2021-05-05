@@ -1,25 +1,11 @@
 const router = require('express').Router();
 const { Pet, User } = require('../models');
-// const withAuth = require('../utils/auth');
+const withAuth = require('../utils/auth');
 
 
 router.get('/', async (req, res) => {
-    try {   //not sure if petData should be used below and newPet in petRoutes
-        const petData = await Pet.findAll({
-            include: [
-                {
-                    model: User,
-                    attributes: ['name'],
-                },
-            ],
-        });
-
-        const pets = petData.map((pet) => pet.get({ plain: true }));
-
-        res.render('homepage', {
-            pets,
-            logged_in: req.session.logged_in
-        });
+    try {  
+        res.render('login');
     } catch (err) {
         res.status(500).json(err);
     }
@@ -47,7 +33,7 @@ router.get('/pet/:id',async (req, res) => {
     }
 });
 
-router.get('/profile', async (req, res) => {
+router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
