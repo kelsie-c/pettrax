@@ -1,6 +1,3 @@
-
-
-
 const name = document.querySelector('#pettrax-name').value.trim();
 const address = document.querySelector('#pettrax-address').value.trim();
 const phone = document.querySelector('#pettrax-phone').value.trim();
