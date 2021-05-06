@@ -51,6 +51,10 @@ Pet.init(
         },
         groupId: {
             type: DataTypes.INTEGER,
+            references: {
+                model: 'group',
+                key: 'id'
+            }
             // DataTypes.ARRAY(DataTypes.INTEGER
       
         },       

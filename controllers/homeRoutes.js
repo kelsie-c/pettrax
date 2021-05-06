@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, User } = require('../models');
+const { Pet, User, Group, Event, ICE, Species, Vet } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -24,7 +24,7 @@ router.get('/pet/:id', async (req, res) => {
 
         const pets = petData.map((pet) => pet.get({ plain: true }));
 
-        res.render('dashboard', {
+        res.render('menu', {
             pets,
             logged_in: req.session.logged_in
         });
@@ -51,6 +51,133 @@ router.get('/profile', withAuth, async (req, res) => {
     }
 });
 
+router.get('/menu', withAuth, async (req, res) => {
+    
+    try {
+        
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [ { model: Group } ],
+        });
+        
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('menu', {
+            // ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+// ----------------------------------------------------------
+router.get('/dashboard', withAuth, async (req, res) => {
+    
+    try {
+        
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [ { model: Group } ],
+        });
+        
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('menu', {
+            // ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/pets', withAuth, async (req, res) => {
+    
+    try {
+        
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [ { model: Group } ],
+        });
+        
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('menu', {
+            // ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/groups', withAuth, async (req, res) => {
+    
+    try {
+        
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [ { model: Group } ],
+        });
+        
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('menu', {
+            // ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/logs', withAuth, async (req, res) => {
+    
+    try {
+        
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [ { model: Group } ],
+        });
+        
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('menu', {
+            // ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/contacts', withAuth, async (req, res) => {
+    
+    try {
+        
+        const userData = await User.findByPk(req.session.user_id, {
+            attributes: { exclude: ['password'] },
+            include: [ { model: ICE, through: Group } ],
+        });
+        
+        const user = userData.get({ plain: true });
+        console.log(user);
+
+        res.render('contacts', {
+            // ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+//-------------------------------------------------------------
 router.get('/login', (req, res) => {
     if (req.session.logged_in) {
         res.redirect('/profile');
