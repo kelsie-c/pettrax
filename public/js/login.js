@@ -1,8 +1,8 @@
 const loginFormHandler = async (event) => {
     event.preventDefault();
   
-    const email = document.getElementById('#email').valuel
-    const password = document.getElementById('#current-password')
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
   
     if (email && password) {
       const response = await fetch('/api/users/login', {
@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
       });
   
       if (response.ok) {
-        document.location.replace('/dashboard');
+        document.location.replace('/menu');
       } else {
         // alert(response.statusText);
         alert('Failed to login')
