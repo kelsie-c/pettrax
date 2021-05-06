@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetTrax</title>
+</head>
+
+<body>
+
+  <div class="wrapper">
+    <h1 class="form-signin">Welcome to PetTrax</h1>
+    <form class="form-signin">
+      <h2 class="form-signin">Please sign in</h2>
+      <input type="text" class="form-control" name="username" placeholder="email address" required="" autofocus="" />
+      <input type="password" class="form-control" name="password" placeholder="Password" required="" />
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me" id="remember-me" name="remember-me"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">sign in</button>
+    </form>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Sign up</h3>
+      <form class="form signup-form">
+        <div class="form-group">
+          <label for="email-signup"></label>
+          <input type="text" class="form-input" name="username" placeholder="email address" required="" autofocus="" />
+        </div>
+        <div class="form-group">
+          <label for="password-signup" placeholder="password">password:</label>
+          <input class="form-input" type="password" id="password-signup" placeholder="password"/>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-primary" type="submit">sign up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Create a PetTrax Profile</h3>
+      <form class="pettrax-profile-form">
+        <div class="form-group">
+          <label for="pettrax-name">name:</label>
+          <input class="form-input" type="text" id="pettrax-name" placeholder="name" />
+        </div>
+        <div>
+        <label for="pettrax-address">address:</label>
+        <input class="form-input" type="text" id="pettrax-address" name="pettrax-address" placeholder="street"/>
+        <label for="pettrax-address"></label>
+        <input class="form-input" type="text" id="pettrax-address" name="pettrax-address" placeholder="city"/>
+        </div>
+        <div>
+      <input class="form-input" type="text" id="pettrax-address" name="pettrax-address" placeholder="state"/>
+      <label for="pettrax-address"></label>
+       <input class="form-input" type="text" id="pettrax-address" name="pettrax-address" placeholder="zipcode"/>
+      </div>
+    <div class="form-group">
+      <label for="phone">phone:</label>
+      <input class="form-input" type="number" id="pettrax-phone" name="pettrax-phone" placeholder="phone" />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Next</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Complete your PetTrax Profile </h3>
+    </div>
+    <div class="form-group">
+      <div class="form-group">
+        <label for="pet-name">pet name:</label>
+        <input class="form-input" type="text" id="pettrax-name" placeholder="pet name" />
+      </div>
+      <label for="pet-birthday">birthday:</label>
+      <input class="form-input" type="text" id="pet-birthday" name="pet-birthday" placeholder="birthday" />
+    </div>
+    <div class="form-group">
+      <label for="pet-species">species:</label>
+      <input class="form-input" type="number" id="pet-species" name="pet-species" placeholder="species" />
+    </div>
+    <div class="form-group">
+      <label for="pet-species">breed:</label>
+      <input class="form-input" type="number" id="pet-breed" name="pet-breed" placeholder="breed"/>
+    </div>
+    <div class="form-group">
+      <label for="pet-weight">weight:</label>
+      <input class="form-input" type="number" id="pet-weight" name="pet-species" placeholder="weight" />
+    </div>
+    <div class="form-group">
+      <label for="species">color:</label>
+      <input class="form-input" type="number" id="pet-color" name="pet-color" placeholder="color" />
+    </div>
+    <div class="form-group">
+      <label for="species">birthmark:</label>
+      <input class="form-input" type="number" id="pet-color" name="pet-color" placeholder="birthmark" />
+    </div>
+    <div class="form-group">
+      <p>more info about your pet:</p>
+      <label for="pet-info"></label>
+      <textarea class="form-input" id="pet-info" name="pet-info" placeholder="more info"></textarea>
+    </div>
+    <div>
+      <form action="/action_page.php">
+        <p>upload a photo of your pet!</p>
+        <input type="file" id="myFile" name="filename">
+        <input type="submit">
+      </form>
+    </div>
+    <br>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Create</button>
+    </div>
+    </form>
+  </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <p>Your PetTrax Profile is complete. Do you want to add another Pet?
+          <button type="submit" class="btn btn-primary">Yes</button>
+          <button type="submit" class="btn btn-primary">No</button>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Vet Contact Info</h3>
+      <form class="vet-contact-form">
+        <div class="form-group">
+          <label for="vet-name">name:</label>
+          <input class="form-input" type="text" id="vet-name" placeholder="vet name" />
+        </div>
+        <label for="vet-address">address:</label>
+        <input class="form-input" type="text" id="vet-address" name="vet-address" placeholder="vet address"/>
+    </div>
+    <div class="form-group">
+      <label for="vet-phone">phone:</label>
+      <input class="form-input" type="number" id="vet-phone" name="vet-phone" placeholder="vet phone" />
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-primary">Save</button>
+      <button type="submit" class="btn btn-primary">Edit</button>
+      </form>
+    </div>
+  </div>
+
+
+  <div class="row">
+    <div class="col-md-6">
+      <h3>Emergency Contact Info</h3>
+      <form class="ice-contact-form">
+        <div class="form-group">
+          <label for="ice-name">name:</label>
+          <input class="form-input" type="text" id="ice-name" placeholder="contact name" />
+        </div>
+        <div class="form-group">
+          <label for="pettrax-phone">relationship:</label>
+          <input class="form-input" type="number" id="ice-relationship" name="ice-relationship" placeholder="relationship" />
+        </div>
+        <div class="form-group">
+          <label for="ice-phone">phone:</label>
+          <input class="form-input" type="number" id="ice-phone" name="ice-phone" placeholder="phone"/>
+        </div>
+        <div class="form-group">
+          <label for="ice-address">address:</label>
+          <input class="form-input" type="text" id="ice-address" name="ice-address" placeholder="address" />
+        </div>
+        <div class="form-group">
+          <label for="instructions">special instructions:</label>
+          <textarea class="form-input" id="instructions" name="instructions" placeholder="special instructions"></textarea>
+        </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="submit" class="btn btn-primary">Edit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+
+</body>
+
+</html>

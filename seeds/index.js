@@ -7,6 +7,7 @@ const seedVets = require('./vet-seeds');
 const seedSpecies = require('./species-seeds');
 const seedGroups = require('./group-seeds');
 
+
 const sequelize = require('../config/connection');
 
 const seedAll = async () => {
@@ -34,6 +35,5 @@ const seedAll = async () => {
   process.exit(0);
 
 };
-
 
 seedAll();

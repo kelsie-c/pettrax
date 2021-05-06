@@ -9,6 +9,7 @@ const speciesData = [
         petId: 45612,
         speciesName: "Dog"
     },
+  
 ]
 const seedSpecies = () => Species.bulkCreate(speciesData);
 

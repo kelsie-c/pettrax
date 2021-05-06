@@ -11,10 +11,10 @@ ICE.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        groupId: {
+       groupId: {
             type: DataTypes.INTEGER,
             allowNull: false,
-            // references: {
+        //     // references: {
             //     model: 'group',
             //     key: 'id',
             // },
@@ -23,10 +23,21 @@ ICE.init(
             type: DataTypes.STRING,
             allowNull: false,
         },
+
+        // contactRelationship: {
+        //     type: DataTypes.INTEGER,
+        //     allowNull: false,
+        //     // references: {
+        //     //     model: 'group',
+        //     //     key: 'id',
+        //     // },
+        // },
+
         contactPhone: {
             type: DataTypes.STRING,
             allowNull: false,
         },
+   
     },
     {
         sequelize,
