@@ -87,9 +87,6 @@ input {
   color: var(--LightSlate);
 }
 
-form {
-  line-height: 1.5em;
-}
 
 button {
   width: 100%;

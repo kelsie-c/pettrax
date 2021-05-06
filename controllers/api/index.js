@@ -10,7 +10,7 @@ const groupRoutes = require('./groupRoutes');
 
 router.use('/events', eventsRoutes);
 router.use('/ice', ICERoutes);
-router.use('/notifications',notificationRoutes);
+// router.use('/notifications',notificationRoutes);
 router.use('/pets', petRoutes);
 router.use('/species', speciesRoutes);
 router.use('/users', userRoutes);

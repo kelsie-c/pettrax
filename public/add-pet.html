@@ -1,15 +1,31 @@
-<div class="container menu-page">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <!--GOOGLE FONTS-->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@700&display=swap"
+    rel="stylesheet">
+  <!--CUSTOM STYLES-->
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <title>PetTrax: Add a Pet!</title>
+</head>
+
+<body class="container menu-page">
 
   <header class="container header">
     <div class="col-12">
       <nav class="d-flex justify-content-between">
-        {{!-- Do we need this html tag? --}}
         <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
       </nav>
     </div>
   </header>
 
-  {{!-- <!-- Main horizontal wrapper --> --}}
+  <!-- Main horizontal wrapper -->
   <div class="row justify-content-center">
     <!-- Login form wrapper -->
     <div class="col col-10 col-md-6">
@@ -28,32 +44,19 @@
     </div>
   </div>
 
-  </div>
- <script src="./public/js/pet.js"></script>
 
 
+  <!--JQUERY & POPPER-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!--BOOTSTRAP 5-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+  <!-- CUSTOM SCRIPTS -->
+  <script src="./public/js/add-pet.js"></script>
 
+</body>
 
-
-
-
-{{!--
-{{#if pet-profile.length}}
-<div class="col-md-6 project-list">
-  <h3>Current Projects:</h3>
-
-  {{#each projects as |project|}}
-  <div class="row mb-2">
-    <div class="col-md-8">
-      <h4><a href="/project/{{project.id}}">{{project.name}}</a></h4>
-    </div>
-    <div class="col-md-4">
-      <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-    </div>
-  </div>
-  {{/each}}
-</div>
-{{/if}}
-</div>
-
-<script src="./js/profile.js"></script> --
+</html>

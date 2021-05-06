@@ -11,7 +11,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/pet/:id',async (req, res) => {
+router.get('/pet/:id', async (req, res) => {
     try {
         const petData = await Pet.findByPk(req.params.id, {
             include: [
@@ -22,10 +22,10 @@ router.get('/pet/:id',async (req, res) => {
             ],
         });
 
-        const pet = petData.get({ plain: true });
+        const pets = petData.map((pet) => pet.get({ plain: true }));
 
-        res.render('pet', {
-            ...pet,
+        res.render('dashboard', {
+            pets,
             logged_in: req.session.logged_in
         });
     } catch (err) {

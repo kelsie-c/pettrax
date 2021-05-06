@@ -5,12 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-<!--GOOGLE FONTS-->
+  <!--GOOGLE FONTS-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@700&display=swap" rel="stylesheet">
-<!--CUSTOM STYLES-->
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&family=Merienda:wght@700&display=swap"
+    rel="stylesheet">
+  <!--CUSTOM STYLES-->
+  <!-- <link rel="stylesheet" href="./css/reset.css" /> -->
   <link rel="stylesheet" href="./css/style.css" />
-  <title>PetTrax: Profile Admin</title>
+  <title>PetTrax: Sign up</title>
 </head>
 
 <body class="container menu-page">
@@ -19,7 +21,6 @@
     <div class="col-12">
       <nav class="d-flex justify-content-between">
         <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
-        <a href="menu.html">Menu</a>
       </nav>
     </div>
   </header>
@@ -28,12 +29,17 @@
   <div class="row justify-content-center">
     <!-- Login form wrapper -->
     <div class="col col-10 col-md-6">
-      <a href="dashboard.html" class="breadcrumb"><< Back to Dashboard</a>
       <h2>Start Tracking</h2>
-      <form action="./js/login.js" method="POST">
-        <input type="email" id="email" name="email" placeholder="email address" required><br>
-        <input type="password" id="password" name="password" placeholder="password" required><br><br>
-        <button type="submit">LOG IN</button>
+      <form class="signup-form" type="text" for="signup" action="./public/html/menu.html" method="POST">
+        <!-- <form class='signup-form'type=text for=sign-up action="./js/login.js" method="POST"> This page should go where? Dashboard or Menu first?-->
+        <input class="form-input" type="name" id="name" placeholder="name" />
+        <input class="form-input" type="street" id="street" name="street" placeholder="street address" />
+        <input class="form-input" type="city" id="city" name="city" placeholder="city" />
+        <input class="form-input" type="state" id="state" name="state" placeholder="state" />
+        <input class="form-input" type="number" id="zipcode" name="zipcode" placeholder="zipcode" />
+        <input class="form-input" type="email" id="email" name="email" placeholder="email address" required><br>
+        <input class="form-input" type="password" id="password" name="password" placeholder="current-password" required><br><br>
+        <button type="submit">SIGN UP</button>
       </form>
     </div>
   </div>
@@ -47,7 +53,7 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <!-- CUSTOM SCRIPTS -->
-  <script src="./js/login.js"></script>
+  <script src=".public/js/signup.js"></script>
 
 </body>
 

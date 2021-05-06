@@ -54,6 +54,9 @@ User.init(
             // DataTypes.ARRAY(DataTypes.INTEGER)
             // add functionality for deterniming groupID later
         }
+            
+    
+
     },
     {
         hooks: {
@@ -71,7 +74,7 @@ User.init(
         freezeTableName: true,
         underscored: true,
         modelName: 'user',
-    }
+    },
 );
 
 module.exports = User;

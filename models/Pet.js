@@ -49,16 +49,17 @@ Pet.init(
             //     len: [2,100],
             // },
         },
-        ownerId: {
-            type: DataTypes.INTEGER,
-            // DataTypes.ARRAY(DataTypes.INTEGER)
-            allowNull: false,
-        },
         groupId: {
             type: DataTypes.INTEGER,
-            // DataTypes.ARRAY(DataTypes.INTEGER)
-            
+            // DataTypes.ARRAY(DataTypes.INTEGER
+      
+        },       
+        ownerId: {
+            type: DataTypes.INTEGER,
+                // DataTypes.ARRAY(DataTypes.INTEGER)
+             allowNull: false,
         },
+    
     },
     {
         sequelize,
