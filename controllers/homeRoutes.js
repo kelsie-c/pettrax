@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, User, Group, Event, ICE, Species, Vet } = require('../models');
+const { Pet, User, Event, } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -57,7 +57,7 @@ router.get('/menu', withAuth, async (req, res) => {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [ { model: Group } ],
+            // include: [ { model: Group } ],
         });
         
         const user = userData.get({ plain: true });
@@ -78,7 +78,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [ { model: Group } ],
+            // include: [ { model: Group } ],
         });
         
         const user = userData.get({ plain: true });
@@ -99,7 +99,7 @@ router.get('/pets', withAuth, async (req, res) => {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [ { model: Group } ],
+            // include: [ { model: Group } ],
         });
         
         const user = userData.get({ plain: true });
@@ -114,26 +114,26 @@ router.get('/pets', withAuth, async (req, res) => {
     }
 });
 
-router.get('/groups', withAuth, async (req, res) => {
+// router.get('/groups', withAuth, async (req, res) => {
     
-    try {
+//     try {
         
-        const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ['password'] },
-            include: [ { model: Group } ],
-        });
+//         const userData = await User.findByPk(req.session.user_id, {
+//             attributes: { exclude: ['password'] },
+//             include: [ { model: Group } ],
+//         });
         
-        const user = userData.get({ plain: true });
-        console.log(user);
+//         const user = userData.get({ plain: true });
+//         console.log(user);
 
-        res.render('menu', {
-            // ...user,
-            logged_in: true
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
+//         res.render('menu', {
+//             // ...user,
+//             logged_in: true
+//         });
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
 
 router.get('/logs', withAuth, async (req, res) => {
     
@@ -141,7 +141,7 @@ router.get('/logs', withAuth, async (req, res) => {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [ { model: Group } ],
+            // include: [ { model: Group } ],
         });
         
         const user = userData.get({ plain: true });
@@ -156,10 +156,15 @@ router.get('/logs', withAuth, async (req, res) => {
     }
 });
 
+<<<<<<< Updated upstream
 router.get('/contact', withAuth, async (req, res) => {
+=======
+// router.get('/contacts', withAuth, async (req, res) => {
+>>>>>>> Stashed changes
     
-    try {
+//     try {
         
+<<<<<<< Updated upstream
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
             include: [ { model: Group } ],
@@ -176,6 +181,24 @@ router.get('/contact', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
+=======
+//         const userData = await User.findByPk(req.session.user_id, {
+//             attributes: { exclude: ['password'] },
+//             include: [ { model: ICE, through: Group } ],
+//         });
+        
+//         const user = userData.get({ plain: true });
+//         console.log(user);
+
+//         res.render('contacts', {
+//             // ...user,
+//             logged_in: true
+//         });
+//     } catch (err) {
+//         res.status(500).json(err);
+//     }
+// });
+>>>>>>> Stashed changes
 
 //-------------------------------------------------------------
 router.get('/login', (req, res) => {
