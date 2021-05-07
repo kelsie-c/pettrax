@@ -14,35 +14,15 @@
     <!-- Pet cards wrapper -->
     <div class="row d-flex justify-content-around">
       {{#each pets as |pet|}}
-      <div class="pet-card col-5 col-md-3 text-center">
-        <img class="pet-pic" src="{{ pet.photo }}" alt="Photo of Ditto">
-        <div class="pet-title">
-          <p class="pet-name">{{ pet.name }}</p>
-          <p class="pet-warning">No Warnings</p>
+        <div class="pet-card col-5 col-md-3 text-center">
+          <input type="hidden" id="pet-id" value="{{ pet.id }}">
+          <img class="pet-pic" src="{{ pet.photo }}" alt="Photo of {{ pet.name }}">
+          <div class="pet-title">
+            <p class="pet-name">{{ pet.name }}</p>
+            <p class="pet-warning">No Warnings</p>
+          </div>
         </div>
-      </div>
       {{/each}}
-      {{!-- <div class="pet-card col-5 col-md-3 text-center">
-        <img class="pet-pic" src="{{ pet.photo }}" alt="Photo of Dublin">
-        <div class="pet-title">
-          <p class="pet-name">Dublin</p>
-          <p class="pet-warning">No Warnings</p>
-        </div>
-      </div>
-      <div class="pet-card col-5 col-md-3 text-center">
-        <img class="pet-pic" src="./img/pet-photos/Dagger_300x300.jpg" alt="Photo of Dagger">
-        <div class="pet-title">
-          <p class="pet-name">Dagger</p>
-          <p class="pet-warning">No Warnings</p>
-        </div>
-      </div>
-      <div class="pet-card col-5 col-md-3 text-center">
-        <img class="pet-pic" src="./img/pet-photos/Dita_300x300.jpg" alt="Photo of Dita">
-        <div class="pet-title">
-          <p class="pet-name">Dita</p>
-          <p class="pet-warning">No Warnings</p>
-        </div>
-      </div> --}}
 
       <!-- Event Icon Row: Poo, Pee, Food -->
       <div class="row d-flex justify-content-around my-3 py-3 border-top border-2 border-dark">
@@ -61,18 +41,14 @@
       </div>
 
     </div>
-    <form action="./js/dashboard.js" method="POST">
+    <form>
       <input type="time" id="time" name="time" placeholder="Enter Custom Time" autocomplete="on"><br>
-      <button type="submit">TRACK</button>
+      <button id="submit" type="submit">TRACK</button>
     </form>
   </div>
 
-
-
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <!-- CUSTOM SCRIPTS -->
-  <script src="./js/login.js"></script>
+  <script src="./js/dashboard.js"></script>
 
 </div>
 

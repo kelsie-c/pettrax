@@ -29,11 +29,11 @@ fileUpload.addEventListener('change', function(event) {
         data: formData,
     }).then(function(res) {
         // console.log(res);
-        const format = res.data.format;
+        // const format = res.data.format;
         const publicId = res.data.public_id;
         const version = res.data.version;
         // getTransformedImage(format, publicId, version);
-        const newUrl = CLOUDINARY_IMAGE + "c_fill,w_125,h_125,g_auto,r_max/v" + version + "/" + publicId + "." + format;
+        const newUrl = CLOUDINARY_IMAGE + "c_fill,w_125,h_125,g_auto,r_max/v" + version + "/" + publicId + ".png";
         photo = newUrl;
         imgPreview.src = newUrl;
         console.log(imgPreview);
