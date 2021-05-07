@@ -4,53 +4,45 @@ const petData = [
 
     {
         name: "Ditto",
-        birthday: 04/17/3025,
+        birthday: 04/17/2019,
         speciesType: "Dog",
         breed: "Labrador",
         weight: 50.09,
         color: "Black",
         birthmark: "Brown Paws",
-        groupId: 1,
         ownerId: 2,
-
+        vetName: "Dr. Charlie Brown",
     },
     {
         name: 'Dublin',
-        birthday: 04/17/3025,
+        birthday: 04/17/2020,
         speciesType: 'Dog',
         breed: 'Maine Coon',
-        weight: 50.09,
+        weight: 20.09,
         color: 'Brown',
         birthmark: "brown spot",
-        groupId: 1,
-        ownerId: 2,
-       
-        
+        ownerId: 2,  
+        contactName: "Julie Owens",   
     },
     {
         name: 'Dagger',
-        birthday: 04/17/3025,
+        birthday: 04/17/2018,
         speciesType: 'Dog',
         breed: 'Chihuaha',
-        weight: 50.09,
+        weight: 30.09,
         color: 'Tan',
         birthmark: "Little Tail",
-        groupId: 1,
-        ownerId: 2,
-        
+        ownerId: 2,       
     },
     {
         name: 'Dita',
-        birthday: 04/17/3025,
+        birthday: 04/17/2017,
         speciesType: 'Dog',
         breed: 'Sphynx',
-        weight: 50.09,
+        weight: 40.09,
         color: 'None',
         birthmark: "Marker",
-        groupId: 1,
-        ownerId: 2,
-       
-       
+        ownerId: 2,   
     }
   
    

@@ -2,22 +2,22 @@
 
     const eventData = [
         {
-            petId: 67854,
+            petId: 1,
             eventType: "Poop",
             time: "Date",
         },
         {
-            petId: 12345,
+            petId: 2,
             eventType: "Pee",
             time: "Date",
         },
         {
-            petId: 78945,
+            petId: 3,
             eventType: "Poop and Pee",
             time: "Date",
         },
         {
-            petId: 78615,
+            petId: 4,
             eventType: "Poop",
             time: "Date",
         },
