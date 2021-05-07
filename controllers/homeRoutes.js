@@ -125,6 +125,25 @@ router.get('/pets', withAuth, async (req, res) => {
     }
 });
 
+router.get('/addpets', async (req, res) => {
+    const userData = await User.findByPk(req.session.user_id, {
+        attributes: { exclude: ['password'] },
+        include: [{ model: Pet }],
+    });
+    
+    const user = userData.get({ plain: true });
+    console.log(user);
+
+    try {
+        res.render('add-pet', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
 // router.get('/groups', withAuth, async (req, res) => {
     
 //     try {
