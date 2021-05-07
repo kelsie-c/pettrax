@@ -3,33 +3,30 @@
   <header class="container header">
     <div class="col-12">
       <nav class="d-flex justify-content-between">
-        {{!-- Do we need this html tag? --}}
+        <!-- Do we need this html tag? -->
         <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
       </nav>
     </div>
   </header>
 
-  {{!-- <!-- Main horizontal wrapper --> --}}
+  <!-- Main horizontal wrapper -->
   <div class="row justify-content-center">
     <!-- Login form wrapper -->
     <div class="col col-10 col-md-6">
-      <h2>Add a Pet!</h2>
-      <form class="pet-form-input" type="text" for="pet" action="/form/submit" method="POST">
-        <!-- <form class='signup-form'type=text for=sign-up action="./js/login.js" method="POST"> This page should go where? Dashboard or Menu first?-->
-        <input class="form-input" type="text" id="pet-name" name="name" placeholder="pet name" />
-        <input class="form-input" type="text" id="pet-species" name="species" placeholder="species" />
-        <input class="form-input" type="text" id="pet-breed" name="breed" placeholder="breed" />
-        <input class="form-input" type="text" id="pet-weight" name="weight" placeholder="weight" />
-        <input class="form-input" type="text" id="pet-color" name="color" placeholder="color" />
-        <input class="form-input" type="text" id="pet-birthmark" name="birthmark" placeholder="birthmark"><br>
-        <input class="form-input" type="text" id="pet-info" name="info" placeholder="notes..."><br><br>
-        <button type="submit" value="submit">SAVE</button>
-      </form>
+      <a id="dashboard" href="#" class="breadcrumb"><< Back to Dashboard</a>
+      <h2>Pets</h2><br>
+      {{#each pets as |pet|}}
+      <img src="{{ pet.photo }}"/>
+      <p id="user-name">Name: <br> {{ pet.name }}</p>
+      <p id="user-address">Birthday: <br> {{ pet.birthday }}</p>
+      <br>
+      {{/each}}
+      <button type="submit" value="submit">EDIT</button>
     </div>
   </div>
 
   </div>
- <script src="./public/js/pet.js"></script>
+ <script src="./js/pet.js"></script>
 
 
 
@@ -37,7 +34,7 @@
 
 
 
-{{!--
+<!--
 {{#if pet-profile.length}}
 <div class="col-md-6 project-list">
   <h3>Current Projects:</h3>
@@ -56,4 +53,4 @@
 {{/if}}
 </div>
 
-<script src="./js/profile.js"></script> --
+<script src="./js/profile.js"></script> -->

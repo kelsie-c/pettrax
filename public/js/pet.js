@@ -8,7 +8,11 @@ const color = document.querySelector('#pet-color')
 const birthmark = document.querySelector('#pet-birthmark')
 const petInfo = document.querySelector('#pet-info')
 
+const dashboard = document.getElementById('dashboard');
 
+dashboard.addEventListener('click', () => {
+    document.location.replace('/dashboard');
+})
 
 const editButtonHandler = async (event) => {
   if (event.target.hasAttribute('data-id')) {
