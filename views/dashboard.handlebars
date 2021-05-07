@@ -13,16 +13,17 @@
   <div class="container">
     <!-- Pet cards wrapper -->
     <div class="row d-flex justify-content-around">
-
+      {{#each pets as |pet|}}
       <div class="pet-card col-5 col-md-3 text-center">
-        <img class="pet-pic" src="./img/pet-photos/Ditto_300x300.jpg" alt="Photo of Ditto">
+        <img class="pet-pic" src="{{ pet.photo }}" alt="Photo of Ditto">
         <div class="pet-title">
-          <p class="pet-name">Ditto</p>
+          <p class="pet-name">{{ pet.name }}</p>
           <p class="pet-warning">No Warnings</p>
         </div>
       </div>
-      <div class="pet-card col-5 col-md-3 text-center">
-        <img class="pet-pic" src="./img/pet-photos/Dublin_300x300.jpg" alt="Photo of Dublin">
+      {{/each}}
+      {{!-- <div class="pet-card col-5 col-md-3 text-center">
+        <img class="pet-pic" src="{{ pet.photo }}" alt="Photo of Dublin">
         <div class="pet-title">
           <p class="pet-name">Dublin</p>
           <p class="pet-warning">No Warnings</p>
@@ -41,7 +42,7 @@
           <p class="pet-name">Dita</p>
           <p class="pet-warning">No Warnings</p>
         </div>
-      </div>
+      </div> --}}
 
       <!-- Event Icon Row: Poo, Pee, Food -->
       <div class="row d-flex justify-content-around my-3 py-3 border-top border-2 border-dark">
