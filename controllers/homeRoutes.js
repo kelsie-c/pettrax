@@ -37,13 +37,12 @@ router.get('/profile', withAuth, async (req, res) => {
     try {
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [{ model: Pet }],
         });
 
         const user = userData.get({ plain: true });
 
         res.render('profile', {
-            ...user,
+            // ...user,
             logged_in: true
         });
     } catch (err) {
@@ -156,32 +155,10 @@ router.get('/logs', withAuth, async (req, res) => {
     }
 });
 
-<<<<<<< Updated upstream
-router.get('/contact', withAuth, async (req, res) => {
-=======
 // router.get('/contacts', withAuth, async (req, res) => {
->>>>>>> Stashed changes
     
 //     try {
         
-<<<<<<< Updated upstream
-        const userData = await User.findByPk(req.session.user_id, {
-            attributes: { exclude: ['password'] },
-            include: [ { model: Group } ],
-        });
-        
-        const user = userData.get({ plain: true });
-        console.log(user);
-
-        res.render('contact', {
-            // ...user,
-            logged_in: true
-        });
-    } catch (err) {
-        res.status(500).json(err);
-    }
-});
-=======
 //         const userData = await User.findByPk(req.session.user_id, {
 //             attributes: { exclude: ['password'] },
 //             include: [ { model: ICE, through: Group } ],
@@ -198,7 +175,6 @@ router.get('/contact', withAuth, async (req, res) => {
 //         res.status(500).json(err);
 //     }
 // });
->>>>>>> Stashed changes
 
 //-------------------------------------------------------------
 router.get('/login', (req, res) => {

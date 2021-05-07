@@ -26,7 +26,7 @@ router.get('/:id', async (req, res) => {
 // update a user
 router.put('/:id', async (req, res) => {
   try {
-      const uuserData = await User.update(
+      const userData = await User.update(
           req.body, { where: { id: req.params.id }
       });
       res.status(200).json(userData);
