@@ -42,7 +42,7 @@ router.get('/profile', withAuth, async (req, res) => {
         const user = userData.get({ plain: true });
 
         res.render('profile', {
-            // ...user,
+            ...user,
             logged_in: true
         });
     } catch (err) {
@@ -77,13 +77,25 @@ router.get('/dashboard', withAuth, async (req, res) => {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            // include: [ { model: Group } ],
+            include: [{ model: Pet }],
         });
         
         const user = userData.get({ plain: true });
         console.log(user);
 
-        res.render('menu', {
+        res.render('dashboard', {
+            ...user,
+            logged_in: true
+        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
+
+router.get('/signup', async (req, res) => {
+    
+    try {
+        res.render('signup', {
             // ...user,
             logged_in: true
         });

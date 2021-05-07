@@ -3,13 +3,13 @@
     const eventData = [
         {
             petId: 1,
-            eventType: "Poop",
-            time: "Date",
+            eventType: "Pee",
+            time: "22:14",
         },
         {
-            petId: 2,
+            petId: 1,
             eventType: "Pee",
-            time: "Date",
+            time: "18:56",
         },
         {
             petId: 3,

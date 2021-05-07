@@ -49,10 +49,13 @@ Pet.init(
             //     len: [2,100],
             // },
         },   
-        ownerId: {
+        userId: {
             type: DataTypes.INTEGER,
-                // DataTypes.ARRAY(DataTypes.INTEGER)
-             allowNull: false,
+            allowNull: false,
+            references: {
+                model: 'user',
+                key: 'id'
+            }
         },
         vetName: {
             type: DataTypes.STRING,

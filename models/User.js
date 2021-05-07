@@ -27,7 +27,7 @@ User.init(
             // add address validation through the form? 3rd party library?
         },
         phone: {
-            type: DataTypes.BIGINT,
+            type: DataTypes.STRING,
             allowNull: false,
         //     validate: {
         //         isNumeric: true,

@@ -10,7 +10,7 @@ const petData = [
         weight: 50.09,
         color: "Black",
         birthmark: "Brown Paws",
-        ownerId: 2,
+        userId: 2,
         vetName: "Dr. Charlie Brown",
     },
     {
@@ -21,7 +21,7 @@ const petData = [
         weight: 20.09,
         color: 'Brown',
         birthmark: "brown spot",
-        ownerId: 2,  
+        userId: 2,  
         contactName: "Julie Owens",   
     },
     {
@@ -32,7 +32,7 @@ const petData = [
         weight: 30.09,
         color: 'Tan',
         birthmark: "Little Tail",
-        ownerId: 2,       
+        userId: 2,       
     },
     {
         name: 'Dita',
@@ -42,7 +42,7 @@ const petData = [
         weight: 40.09,
         color: 'None',
         birthmark: "Marker",
-        ownerId: 2,   
+        userId: 2,   
     }
   
    

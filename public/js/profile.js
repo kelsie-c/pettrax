@@ -1,6 +1,12 @@
-const name = document.querySelector('#user-name').value.trim();
-const phone = document.querySelector('#user-phone').value.trim();
-const email = document.querySelector('#user-email').value.trim();
+const name = document.querySelector('#user-name').value;
+const phone = document.querySelector('#user-phone').value;
+const email = document.querySelector('#user-email').value;
+
+const dashboard = document.getElementById('dashboard');
+
+dashboard.addEventListener('click', () => {
+    document.location.replace('/dashboard');
+})
 
 const editButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
