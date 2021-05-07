@@ -14,6 +14,31 @@
     {{/each}}
   </div>
   {{/if}}
-</div>
+</div> --}}
 
-<script src="./js/profile.js"></script> --}}
+<body class="container menu-page">
+
+  <header class="container header">
+    <div class="col-12">
+      <nav class="d-flex justify-content-between">
+        <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main horizontal wrapper -->
+  <div class="row justify-content-center">
+    <div class="col col-10 col-md-6">
+      <!-- <a href="dashboard.html" class="breadcrumb"><< Back to Dashboard</a> -->
+      <h2>Profile</h2><br>
+      <h3>{{user.name}}</h3>
+      <h3>{{user.address}}</h3>
+      <h3>{{user.phone}}</h3>
+      <h3>{{user.email}}</h3>
+      <br>
+      <button type="submit" value="submit">EDIT</button>
+    </div>
+  </div>
+
+<script src="./js/profile.js"></script>
+
