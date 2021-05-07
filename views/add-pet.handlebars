@@ -1,0 +1,43 @@
+<header class="container header">
+    <div class="col-12">
+      <nav class="d-flex justify-content-between">
+        <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main horizontal wrapper -->
+  <div class="row justify-content-center">
+    <!-- Login form wrapper -->
+    <div class="col col-10 col-md-6">
+      <h2>Add a Pet!</h2>
+      <input type="hidden" id="user-id" value="{{ id }}"></input>
+
+      <div class="card-cloud">
+        <img src="https://via.placeholder.com/125.png?text=+" id="img-preview" />
+        <label class="file-upload-container" for="file-upload">
+          <input id="file-upload" type="file" style="display:none;">
+        Upload
+        </label>
+      </div>
+
+
+      <form class="pet-form-input" type="text">
+        <!-- <form class='signup-form'type=text for=sign-up action="./js/login.js" method="POST"> This page should go where? Dashboard or Menu first?-->
+        <input class="form-input" type="text" id="pet-name" name="name" placeholder="pet name" />
+        <input class="form-input" type="text" id="pet-birthday" name="birthday" placeholder="pet birthday" />
+        <input class="form-input" type="text" id="pet-species" name="species" placeholder="species" />
+        <input class="form-input" type="text" id="pet-breed" name="breed" placeholder="breed" />
+        <input class="form-input" type="text" id="pet-weight" name="weight" placeholder="weight" />
+        <input class="form-input" type="text" id="pet-color" name="color" placeholder="color" />
+        <input class="form-input" type="text" id="pet-birthmark" name="birthmark" placeholder="birthmark"><br>
+        <input class="form-input" type="text" id="pet-info" name="info" placeholder="notes...">
+        
+        <br><br>
+        <button id="save-pet" type="submit" value="submit">SAVE</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="./js/add-pet.js"></script>

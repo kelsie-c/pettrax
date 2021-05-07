@@ -20,11 +20,11 @@ Pet.init(
             allowNull: false,
         },
         birthday: {
-            type: DataTypes.DATEONLY,
+            type: DataTypes.STRING,
             allowNull: false,
-            validate: {
-                isDate: true,
-            },
+            // validate: {
+            //     isDate: true,
+            // },
         },
         speciesType: {
             type: DataTypes.STRING,
@@ -44,11 +44,14 @@ Pet.init(
         },
         birthmark: {
             type: DataTypes.STRING,
-            allowNull: false,
+            // allowNull: false,
             // validate: {
             //     len: [2,100],
             // },
         },   
+        petInfo: {
+            type: DataTypes.STRING,
+        },
         userId: {
             type: DataTypes.INTEGER,
             allowNull: false,
