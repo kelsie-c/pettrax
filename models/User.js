@@ -49,18 +49,6 @@ User.init(
             //     len: [8],
             // },
         },
-        groupId: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'group',
-                key: 'id'
-            }
-            // DataTypes.ARRAY(DataTypes.INTEGER)
-            // add functionality for deterniming groupID later
-        }
-            
-    
-
     },
     {
         hooks: {

@@ -48,22 +48,30 @@ Pet.init(
             // validate: {
             //     len: [2,100],
             // },
-        },
-        groupId: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'group',
-                key: 'id'
-            }
-            // DataTypes.ARRAY(DataTypes.INTEGER
-      
-        },       
+        },   
         ownerId: {
             type: DataTypes.INTEGER,
                 // DataTypes.ARRAY(DataTypes.INTEGER)
              allowNull: false,
         },
-    
+        vetName: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        vetAddress: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        vetPhone: {
+            type: DataTypes.STRING,
+            allowNull: false,
+        },
+        contactName: {
+            type: DataTypes.STRING,
+        },
+        contactPhone: {
+            type: DataTypes.STRING,
+        },    
     },
     {
         sequelize,

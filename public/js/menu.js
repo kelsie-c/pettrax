@@ -26,5 +26,5 @@ logs.addEventListener('click', () => {
 });
 
 contacts.addEventListener('click', () => {
-    document.location.replace('/contacts');
+    document.location.replace('/contact');
 });

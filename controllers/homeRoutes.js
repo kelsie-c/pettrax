@@ -156,19 +156,19 @@ router.get('/logs', withAuth, async (req, res) => {
     }
 });
 
-router.get('/contacts', withAuth, async (req, res) => {
+router.get('/contact', withAuth, async (req, res) => {
     
     try {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            include: [ { model: ICE, through: Group } ],
+            include: [ { model: Group } ],
         });
         
         const user = userData.get({ plain: true });
         console.log(user);
 
-        res.render('contacts', {
+        res.render('contact', {
             // ...user,
             logged_in: true
         });
