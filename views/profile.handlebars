@@ -29,16 +29,16 @@
   <!-- Main horizontal wrapper -->
   <div class="row justify-content-center">
     <div class="col col-10 col-md-6">
-      <!-- <a href="dashboard.html" class="breadcrumb"><< Back to Dashboard</a> -->
+      <a id="dashboard" href="#" class="breadcrumb"><< Back to Dashboard</a>
       <h2>Profile</h2><br>
-      <h3 id="user-name"></h3>
-      <h3 id="user-address"></h3>
-      <h3 id="user-phone"></h3>
-      <h3 id="user-email"></h3>
+      <p id="user-name">{{ name }}</p>
+      <p id="user-address">{{ address }}</p>
+      <p id="user-phone">{{ phone }}</p>
+      <p id="user-email">{{ email }}</p>
       <br>
       <button type="submit" value="submit">EDIT</button>
     </div>
   </div>
 
-<script src="./js/profile.js"></script>
+<script src="./js/profile.js" type="module"></script>
 

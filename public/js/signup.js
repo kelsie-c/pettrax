@@ -10,12 +10,17 @@ const signupFormHandler = async (event) => {
     const phone = document.querySelector('#phone').value.trim();
     const email = document.querySelector('#email').value.trim();
     const password = document.querySelector('#password').value.trim();
+    
+    // console.log(name, address, phone, email, password);
   
     if (name && street && city && state && zipcode && phone && email && password) {
+      const address = [street, city, state, zipcode.toString()];
+      const fullAddress = address.join(' ');
+
       // where is this fetching? where will this be posted? Profile?
-      const response = await fetch('/api/users/profile', {
+      const response = await fetch('/api/users/', {
         method: 'POST',
-        body: JSON.stringify({ name, street, city, state, zipcode, phone, email, password }),
+        body: JSON.stringify({ name: name, address: fullAddress, phone: phone, email: email, password: password }),
         headers: { 'Content-Type': 'application/json' },
       });
       //replacing sign up page. Next page? Dashboard? Menu? Pets? 
@@ -28,5 +33,5 @@ const signupFormHandler = async (event) => {
 };
 
   document
-  .querySelector('signup-form')
+  .getElementById('submit')
   .addEventListener('click', signupFormHandler);

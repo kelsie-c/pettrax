@@ -24,3 +24,8 @@ const loginFormHandler = async (event) => {
   document
   .getElementById('submit')
   .addEventListener('click', loginFormHandler);
+
+  const signUp = document.getElementById('signUp');
+  signUp.addEventListener('click', () => {
+      document.location.replace('/signup');
+  });
