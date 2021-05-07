@@ -7,9 +7,7 @@ const userData = [
       address: "23 cherry lane",
       email: "sal@hotmail.com",
       phone: 3306714324,
-      password: "password12345",
-      groupId: 5,
-      
+      password: "password12345",      
     },
     {
         name: 'Jerry',
@@ -17,8 +15,6 @@ const userData = [
         email: "jerry@hotmail.com",
         phone: 3306714324,
         password: "password12345",
-        groupId: 5,
-        
     },
     {
         name: "Bobby",
@@ -26,8 +22,6 @@ const userData = [
         email: "bobby@hotmail.com",
         phone: 3306714324,
         password: "password12345",
-        groupId: 5,
-        
     },
     {
         name: "Tom",
@@ -35,8 +29,6 @@ const userData = [
         email: "tom@hotmail.com",
         phone: 6144167435,
         password: "password12345",
-        groupId: 5,
-       
     },
 
 ];

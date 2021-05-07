@@ -6,4 +6,4 @@ const Pet = require('./Pet');
 //     foreignKey: 'pet_id'
 // });
 
-module.exports = { User, Event, Group, ICE, Pet, Species, Vet };
+module.exports = { User, Event, Pet };
