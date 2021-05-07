@@ -171,14 +171,14 @@ router.get('/logs', withAuth, async (req, res) => {
         
         const userData = await User.findByPk(req.session.user_id, {
             attributes: { exclude: ['password'] },
-            // include: [ { model: Group } ],
+            include: [{ all: true }],
         });
         
         const user = userData.get({ plain: true });
         console.log(user);
 
-        res.render('menu', {
-            // ...user,
+        res.render('logs', {
+            ...user,
             logged_in: true
         });
     } catch (err) {
