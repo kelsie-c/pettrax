@@ -4,7 +4,8 @@
     <div class="col-12">
       <nav class="d-flex justify-content-between">
         <!-- Do we need this html tag? -->
-        <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+        <a id="dashboard" href="#"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+        <a id="menu" href="#">Menu</a>
       </nav>
     </div>
   </header>
@@ -15,6 +16,7 @@
     <div class="col col-10 col-md-6">
       <a id="dashboard" href="#" class="breadcrumb"><< Back to Dashboard</a>
       <h2>Pets</h2><br>
+      <a id="addPet" href="#"><h4>Add New Pet</h4></a>
       {{#each pets as |pet|}}
       <img src="{{ pet.photo }}"/>
       <p id="user-name">Name: <br> {{ pet.name }}</p>

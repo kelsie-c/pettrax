@@ -1,3 +1,16 @@
+const menu = document.getElementById('menu');
+
+menu.addEventListener('click', () => {
+    document.location.replace('/menu');
+});
+
+const dashboard = document.querySelectorAll('#dashboard');
+
+dashboard.forEach(dashLink => dashLink.addEventListener('click', () => {
+    document.location.replace('/dashboard');
+}));
+
+
 const petMenu = document.getElementById('dropdownMenuButton1');
 
 const allPets = document.querySelectorAll('.pet-choices');

@@ -1,3 +1,16 @@
+const menu = document.getElementById('menu');
+
+menu.addEventListener('click', () => {
+    document.location.replace('/menu');
+});
+
+const dashboard = document.getElementById('dashboard');
+
+dashboard.addEventListener('click', () => {
+    document.location.replace('/dashboard');
+})
+
+
 let photo;
 
 // CLOUDINARY ---------------------------------------------------
@@ -48,7 +61,6 @@ event.preventDefault();
 
 const name = document.getElementById('pet-name').value;
 const birthday = document.getElementById('pet-birthday').value;
-const speciesType = document.getElementById('pet-species').value;
 const breed = document.getElementById('pet-breed').value;
 const weight = document.getElementById('pet-weight').value;
 const color = document.getElementById('pet-color').value;
@@ -60,7 +72,7 @@ console.log(userId);
 if (name && birthday && speciesType && breed && weight && color && birthmark && petInfo) {
     const response = await fetch(`/api/pets`, {
       method: 'POST',
-      body: JSON.stringify({ photo: photo, name: name, birthday: birthday, speciesType: speciesType, breed: breed, weight: weight, color: color, birthmark: birthmark, petInfo: petInfo, userId: userId }),
+      body: JSON.stringify({ photo: photo, name: name, birthday: birthday, speciesType: "Dog", breed: breed, weight: weight, color: color, birthmark: birthmark, petInfo: petInfo, userId: userId }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -94,7 +106,7 @@ const editButtonHandler = async (event) => {
   const savePet = document.getElementById('save-pet');
   savePet.addEventListener('click', petFormHandler);
 
-
+  
 
 
 

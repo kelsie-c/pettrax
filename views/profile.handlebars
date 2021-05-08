@@ -1,27 +1,10 @@
-{{!-- {{#if user.length}}
-  <div class="col-md-6 project-list">
-    <h3>Current Projects:</h3>
-
-    {{#each projects as |project|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/project/{{user.id}}">{{user.name}}</a></h4>
-      </div>
-      <div class="col-md-4">
-        <button class="btn btn-sm btn-danger" data-id="{{project.id}}">DELETE</button>
-      </div>
-    </div>
-    {{/each}}
-  </div>
-  {{/if}}
-</div> --}}
-
 <body class="container menu-page">
 
   <header class="container header">
     <div class="col-12">
       <nav class="d-flex justify-content-between">
-        <a href="dashboard.html"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+        <a id="dashboard" href="#"><img src="./img/PetTrax_Logo-Nav.svg" alt="PetTrax logo" width="200px"></a>
+        <a id="menu" href="#">Menu</a>
       </nav>
     </div>
   </header>
