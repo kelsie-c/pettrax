@@ -44,7 +44,7 @@
 
         {{#each pets as |pet|}}
             {{#each events as |event|}}
-            <p id="logs">{{ pet.name }}, {{ event.eventType }}, {{ event.time }} </p>
+            <p id="logs"><span style="text-transform: uppercase">{{ pet.name }}</span> had <span style="text-transform: uppercase">{{ event.eventType }}</span> at {{ event.time }} </p>
             {{/each}}
         {{/each}}
     </div>
