@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Pet, User, Event, } = require('../models');
+const { Pet, User, Event } = require('../models');
 const withAuth = require('../utils/auth');
 
 
@@ -144,38 +144,16 @@ router.get('/addpets', async (req, res) => {
     }
 });
 
-// router.get('/groups', withAuth, async (req, res) => {
-    
-//     try {
-        
-//         const userData = await User.findByPk(req.session.user_id, {
-//             attributes: { exclude: ['password'] },
-//             include: [ { model: Group } ],
-//         });
-        
-//         const user = userData.get({ plain: true });
-//         console.log(user);
-
-//         res.render('menu', {
-//             // ...user,
-//             logged_in: true
-//         });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
-
 router.get('/logs', withAuth, async (req, res) => {
     
     try {
-        
+
         const userData = await User.findByPk(req.session.user_id, {
+            include: [{ model: Pet, include: { model: Event } }],
             attributes: { exclude: ['password'] },
-            include: [{ all: true }],
         });
         
         const user = userData.get({ plain: true });
-        console.log(user);
 
         res.render('logs', {
             ...user,
@@ -185,27 +163,6 @@ router.get('/logs', withAuth, async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-// router.get('/contacts', withAuth, async (req, res) => {
-    
-//     try {
-        
-//         const userData = await User.findByPk(req.session.user_id, {
-//             attributes: { exclude: ['password'] },
-//             include: [ { model: ICE, through: Group } ],
-//         });
-        
-//         const user = userData.get({ plain: true });
-//         console.log(user);
-
-//         res.render('contacts', {
-//             // ...user,
-//             logged_in: true
-//         });
-//     } catch (err) {
-//         res.status(500).json(err);
-//     }
-// });
 
 //-------------------------------------------------------------
 router.get('/login', (req, res) => {
