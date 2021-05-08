@@ -18,24 +18,24 @@ allEvents.forEach(eventType => eventType.addEventListener('click', () => {
 
 const submit = document.getElementById('submit');
 
-submit.addEventListener('click', (event) => {
-    event.stopPropagation();
-    getAllEvents();
+submit.addEventListener('click', () => {
+    // event.stopPropagation();
+    // getAllEvents();
 })
 
-async function getAllEvents(petId, eventType) {
+// async function getAllEvents(petId, eventType) {
 
-    const response = await fetch(`/api/events`, {
-        method: 'GET',
-        headers: {
-        'Content-Type': 'application/json',
-        },
-    });
-    // replace document to pets page. 
-    if (response.ok) {
-        // document.location.replace('/dashboard');
-        console.log(response);
-    } else {
-        alert('Failed to add event');
-    }
-}
+//     const response = await fetch(`/api/events`, {
+//         method: 'GET',
+//         headers: {
+//         'Content-Type': 'application/json',
+//         },
+//     });
+//     // replace document to pets page. 
+//     if (response.ok) {
+//         // document.location.replace('/dashboard');
+//         console.log(response);
+//     } else {
+//         alert('Failed to add event');
+//     }
+// }

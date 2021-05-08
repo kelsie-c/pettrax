@@ -51,6 +51,6 @@ async function createNewEvent(petId, eventType, time) {
     if (response.ok) {
         document.location.replace('/dashboard');
     } else {
-        alert('Failed to add pet');
+        alert('Failed to add event');
     }
 }
