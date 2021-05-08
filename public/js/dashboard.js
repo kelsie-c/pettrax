@@ -9,6 +9,10 @@ const allPets = document.querySelectorAll('.pet-card');
 let petId;
 allPets.forEach(pet => pet.addEventListener('click', () => {
     petId = pet.firstChild.nextElementSibling.defaultValue;
+
+    const petImage = pet.querySelector('.pet-pic');
+    petImage.classList.toggle('pet-pic-selected');
+
 }));
 
 // get all events (pee, poo, food)
@@ -16,6 +20,8 @@ const allEvents = document.querySelectorAll('.event-icon');
 let eventId;
 allEvents.forEach(action => action.addEventListener('click', () => {
     eventId = action.nextSibling.nextSibling.innerHTML;
+
+    action.classList.toggle('icon-selected');
 }));
 
 // get button
@@ -33,6 +39,8 @@ submit.addEventListener('click', (event) => {
 
     const sendDate = year + " " + month + " " + day + " " + time;
     console.log(sendDate);
+
+
 
     createNewEvent(petId, eventId, sendDate);
 })

@@ -201,7 +201,11 @@ textarea:focus {
 }
 
 .pet-pic-selected {
-  border: 6px solid var(--White);
+  border: 6px solid var(--Lime);
+}
+
+.icon-selected {
+  border: 2px solid var(--Lime);
 }
 
 .pet-name {
@@ -213,7 +217,7 @@ textarea:focus {
 }
 
 .pet-name-selected {
-  color: var(--White);
+  color: var(--Lime);
 }
 
 .pet-warning {
