@@ -29,12 +29,12 @@ allEvents.forEach(eventType => eventType.addEventListener('click', () => {
     eventMenu.innerHTML = selectedEvent;
 }));
 
-const submit = document.getElementById('submit');
+// const submit = document.getElementById('submit');
 
-submit.addEventListener('click', () => {
-    // event.stopPropagation();
-    // getAllEvents();
-})
+// submit.addEventListener('click', () => {
+//     // event.stopPropagation();
+//     // getAllEvents();
+// })
 
 // async function getAllEvents(petId, eventType) {
 
