@@ -1,3 +1,14 @@
+const menu = document.getElementById('menu');
+
+menu.addEventListener('click', () => {
+    document.location.replace('/menu');
+});
+
+const dashboard = document.querySelectorAll('#dashboard');
+
+dashboard.forEach(dashLink => dashLink.addEventListener('click', () => {
+    document.location.replace('/dashboard');
+}));
 
 const petName = document.querySelector('#pet-name')
 const birthday = document.querySelector('#pet-birthday')
@@ -8,10 +19,10 @@ const color = document.querySelector('#pet-color')
 const birthmark = document.querySelector('#pet-birthmark')
 const petInfo = document.querySelector('#pet-info')
 
-const dashboard = document.getElementById('dashboard');
+const addPet = document.getElementById('addPet');
 
-dashboard.addEventListener('click', () => {
-    document.location.replace('/dashboard');
+addPet.addEventListener('click', () => {
+    document.location.replace('/addpets');
 })
 
 const editButtonHandler = async (event) => {

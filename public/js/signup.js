@@ -1,3 +1,9 @@
+const dashboard = document.getElementById('dashboard');
+
+dashboard.addEventListener('click', () => {
+    document.location.replace('/dashboard');
+})
+
 const signupFormHandler = async (event) => {
     event.preventDefault();
   

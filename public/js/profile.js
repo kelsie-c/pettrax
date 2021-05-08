@@ -2,11 +2,17 @@ const name = document.querySelector('#user-name').value;
 const phone = document.querySelector('#user-phone').value;
 const email = document.querySelector('#user-email').value;
 
-const dashboard = document.getElementById('dashboard');
+const menu = document.getElementById('menu');
 
-dashboard.addEventListener('click', () => {
+menu.addEventListener('click', () => {
+    document.location.replace('/menu');
+});
+
+const dashboard = document.querySelectorAll('#dashboard');
+
+dashboard.forEach(dashLink => dashLink.addEventListener('click', () => {
     document.location.replace('/dashboard');
-})
+}));
 
 const editButtonHandler = async (event) => {
     if (event.target.hasAttribute('data-id')) {
