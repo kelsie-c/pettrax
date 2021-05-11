@@ -69,7 +69,7 @@ const petInfo = document.getElementById('pet-info').value;
 const userId = document.getElementById('user-id').value;
 console.log(userId);
 
-if (name && birthday && breed && weight && color && birthmark && petInfo) {
+if (name && birthday && breed && weight && color) {
     const response = await fetch(`/api/pets`, {
       method: 'POST',
       body: JSON.stringify({ photo: photo, name: name, birthday: birthday, speciesType: "Dog", breed: breed, weight: weight, color: color, birthmark: birthmark, petInfo: petInfo, userId: userId }),
